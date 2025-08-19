@@ -1,0 +1,89 @@
+site_name: Your Traveller SRD
+site_description: System Reference Document for [Your Game Name]
+site_url: https://the-chaos-consortium.github.io/2d6-scifi
+
+copyright: "Copyright © 2025 The Chaos Consortium & A.T. Gomez. Licensed under CC-BY-SA 4.0."
+
+# Theme configuration
+theme:
+  name: material
+  palette:
+    # Dark mode  
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+  
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.footer
+    - navigation.tabs           # Top-level navigation tabs
+    - navigation.sections       # Sidebar sections
+    - navigation.expand         # Expand all sections by default
+    - navigation.path           # Breadcrumb navigation
+    - navigation.top            # Back to top button
+    - search.highlight          # Highlight search terms
+    - search.suggest           # Search suggestions
+    - search.share             # Share search results
+    - content.tabs.link        # Link tabbed content
+
+# Plugins
+plugins:
+  - search:
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - minify:
+      minify_html: true
+
+# Extensions
+markdown_extensions:
+  # Tables and formatting
+  - tables
+  - attr_list
+  - md_in_html
+  
+  # Admonitions (perfect for rules callouts)
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  
+  # Code blocks and syntax highlighting
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  
+  # Content tabs (great for different rule options)
+  - pymdownx.tabbed:
+      alternate_style: true
+  
+  # Enhanced formatting
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.smartsymbols
+  
+  # Lists and definition lists
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+  # Table of contents
+  - toc:
+      permalink: true
+
+# Navigation structure
+nav:
+  - Home: index.md
+
+# Custom CSS for TTRPG styling
+# extra_css:
+#   - stylesheets/ttrpg.css
+
+# Footer
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/The-Chaos-Consortium/2d6-scifi

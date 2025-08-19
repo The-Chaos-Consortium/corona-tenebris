@@ -1,0 +1,197 @@
+/* docs/stylesheets/ttrpg.css */
+
+/* Stat block styling */
+.stat-block {
+    background-color: var(--md-code-bg-color);
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 0.2rem;
+    padding: 1rem;
+    margin: 1rem 0;
+    font-family: var(--md-code-font);
+}
+
+.stat-block h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: var(--md-accent-fg-color);
+    border-bottom: 1px solid var(--md-accent-fg-color);
+    padding-bottom: 0.25rem;
+}
+
+.stat-block .characteristics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.stat-block .characteristic {
+    text-align: center;
+    background-color: var(--md-default-bg-color);
+    padding: 0.25rem;
+    border-radius: 0.1rem;
+    border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* Equipment tables */
+.equipment-table {
+    font-size: 0.85rem;
+}
+
+.equipment-table th {
+    background-color: var(--md-primary-fg-color);
+    color: var(--md-primary-bg-color);
+    text-align: center;
+}
+
+.equipment-table td {
+    text-align: center;
+}
+
+.equipment-table .item-name {
+    text-align: left;
+    font-weight: 500;
+}
+
+/* Career tables */
+.career-table {
+    margin: 1rem 0;
+}
+
+.career-table .roll-column {
+    width: 60px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.career-table .result-column {
+    font-style: italic;
+}
+
+/* Dice notation styling */
+.dice {
+    font-family: var(--md-code-font);
+    background-color: var(--md-code-bg-color);
+    padding: 0.1rem 0.3rem;
+    border-radius: 0.1rem;
+    font-weight: bold;
+    color: var(--md-accent-fg-color);
+}
+
+/* Quick reference boxes */
+.quick-ref {
+    background-color: var(--md-accent-fg-color--transparent);
+    border-left: 4px solid var(--md-accent-fg-color);
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.quick-ref h4 {
+    margin-top: 0;
+    color: var(--md-accent-fg-color);
+}
+
+/* Combat action cards */
+.action-card {
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 0.3rem;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    background-color: var(--md-default-bg-color);
+}
+
+.action-card h5 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: var(--md-primary-fg-color);
+}
+
+.action-card .action-type {
+    font-size: 0.8rem;
+    color: var(--md-default-fg-color--light);
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+/* Print styles */
+@media print {
+    .md-header,
+    .md-tabs,
+    .md-sidebar,
+    .md-footer {
+        display: none !important;
+    }
+    
+    .md-main__inner {
+        margin: 0 !important;
+    }
+    
+    .md-content {
+        max-width: none !important;
+    }
+    
+    /* Ensure tables don't break across pages */
+    table {
+        page-break-inside: avoid;
+    }
+    
+    /* Keep stat blocks together */
+    .stat-block {
+        page-break-inside: avoid;
+    }
+    
+    /* Print-friendly colors */
+    .stat-block {
+        border: 1px solid #000;
+        background-color: #f5f5f5;
+    }
+}
+
+/* Dark mode specific adjustments */
+[data-md-color-scheme="slate"] {
+    .stat-block {
+        background-color: var(--md-code-bg-color);
+        border-color: var(--md-default-fg-color--lightest);
+    }
+    
+    .action-card {
+        background-color: var(--md-default-bg-color);
+        border-color: var(--md-default-fg-color--lightest);
+    }
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .stat-block .characteristics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .equipment-table {
+        font-size: 0.75rem;
+    }
+    
+    /* Stack table columns on very small screens */
+    @media screen and (max-width: 480px) {
+        .equipment-table,
+        .career-table {
+            display: block;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+    }
+}
+
+/* Accessibility improvements */
+.dice:focus,
+.action-card:focus-within {
+    outline: 2px solid var(--md-accent-fg-color);
+    outline-offset: 2px;
+}
+
+/* Highlight important mechanics */
+.mechanic-highlight {
+    background-color: var(--md-accent-fg-color--transparent);
+    padding: 0.1rem 0.3rem;
+    border-radius: 0.1rem;
+    font-weight: 500;
+}
