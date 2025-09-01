@@ -18,7 +18,7 @@ theme:
     - navigation.instant
     - navigation.tracking
     - navigation.footer
-    - navigation.tabs           # Top-level navigation tabs
+    # - navigation.tabs           # Top-level navigation tabs
     - navigation.sections       # Sidebar sections
     - navigation.expand         # Expand all sections by default
     - navigation.path           # Breadcrumb navigation
@@ -76,7 +76,10 @@ markdown_extensions:
 
 # Navigation structure
 nav:
-  - Home: index.md
+  - About: index.md
+  - Characters: 
+    - Character Creation: character-creation.md
+    - Skills: skills.md
 
 # Custom CSS for TTRPG styling
 # extra_css:
