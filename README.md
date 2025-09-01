@@ -1,2 +1,2 @@
-# 2d6-scifi
-SRD for Sci-fi TTRPG
+# Corona Tenebris
+SRD for Corona Tenebris TTRPG

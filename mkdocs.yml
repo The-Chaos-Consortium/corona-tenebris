@@ -1,8 +1,8 @@
-site_name: Your Traveller SRD
-site_description: System Reference Document for [Your Game Name]
-site_url: https://the-chaos-consortium.github.io/2d6-scifi
+site_name: Corona Tenebris
+site_description: System Reference Document for Corona Tenebris
+site_url: https://the-chaos-consortium.github.io/corona-tenebris
 
-copyright: "Copyright © 2025 The Chaos Consortium & A.T. Gomez. Licensed under CC-BY-SA 4.0."
+copyright: "Copyright © 2025 The Chaos Consortium & A.T. Gomez. Licensed under CC-BY-SA 4.0. Corona Tenebris™ is a trademark of The Chaos Consortium."
 
 # Theme configuration
 theme:
@@ -86,4 +86,4 @@ nav:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/The-Chaos-Consortium/2d6-scifi
+      link: https://github.com/The-Chaos-Consortium/corona-tenebris
