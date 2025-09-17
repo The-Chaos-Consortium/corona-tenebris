@@ -79,6 +79,7 @@ nav:
   - About: index.md
   - Characters: 
     - Character Creation: character-creation.md
+    - Dice Mechanics: dice-mechanics.md
     - Skills: skills.md
 
 # Custom CSS for TTRPG styling
